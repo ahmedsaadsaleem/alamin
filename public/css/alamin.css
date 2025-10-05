@@ -1,0 +1,102 @@
+/**
+    alamin app css file
+**/
+
+/*=== Start Variables ===*/
+:root {
+    --main-color: #fefffe;
+    --secondary-color: #f1f5f9;
+    --head-color: #210124;
+    --text-color: #210124;
+    --red-color: #750d37;
+    --green-color: #b3dec1;
+    --milk-color: #e5fcf5;
+}
+
+/**
+    Start Global Rules
+**/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+}
+body {
+    background-color: var(--bs-light-bg-subtle);
+    color: #210124;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.page-content {
+    flex: 1;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/** Small **/
+@media (min-width: 576px) {
+    .container {
+        width: 540px
+    }
+}
+/** Meduim **/
+@media (min-width: 768px) {
+    .container {
+        width: 720px
+    }
+}
+/** Larg **/
+@media (min-width: 992px) {
+    .container {
+        width: 960px
+    }
+}
+/** X Larg **/
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px
+    }
+}
+/** XX Larg **/
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px
+    }
+}
+/**
+    Start Elements
+**/
+.page-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fefffe;
+}
+.page-header .container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.page-header .logo img {
+
+}
+.page-header nav ul {
+    display: flex;
+    list-style: none;
+}
+.page-header nav ul li {
+    margin-left: 15px;
+}
+.page-header nav ul li a {
+    color: #210124;
+    text-decoration: none;
+}

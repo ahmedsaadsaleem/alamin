@@ -1,0 +1,251 @@
+/**
+    alamin app css file
+**/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+/*=== Start Variables ===*/
+:root {
+    --main-color: #fefffe;
+    --secondary-color: #f1f5f9;
+    --head-color: #210124;
+    --text-color: #210124;
+    --red-color: #750d37;
+    --green-color: #b3dec1;
+    --milk-color: #e5fcf5;
+}
+
+/*=== Start Global Rules ===*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+*:focus {
+    outline: none;
+}
+html {
+    direction: rtl;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color: var(--bs-light-bg-subtle);
+}
+a {
+    text-decoration: none;
+}
+
+/* Start Elements */
+.tm-bg-main {
+    background-color: var(--main-color);
+}
+.show {
+    display: block;
+}
+/* End Elements */
+/* Start Layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* #content-wrapper {
+    background-color: #abbfff;
+    transition: 2s linear 1s;
+} */
+/* End Layout */
+/*=== Start Header ===*/
+.page-header {
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px #ddd;
+}
+.page-header .tm-navbar {
+    flex-wrap: nowrap;
+    flex-grow: 1;
+}
+.page-header .toggle {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.page-header .toggle:hover {
+    background-color: #eee;
+}
+.page-header .toggle i {
+    font-size: large;
+    font-weight: 900;
+}
+.page-header .brand {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.page-header .tm-collapse {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+.page-header .tm-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.page-header .header-nav .search-box {
+    display: flex;
+    align-items: center;
+}
+.page-header .header-nav .search-box input[type=text] {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    outline: none;
+    padding: 5px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.page-header .header-nav .search-box input[type=text]::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f002";
+    font-weight: 900;
+    color: var(--text-color);
+    position: absolute;
+}
+@media (max-width: 991.98px) {
+    .page-header .header-nav .search-box input[type=text] {
+        position: relative;
+        width: 150px;
+    }
+}
+.page-header .header-nav .collapse {
+    display: flex;
+    align-items: center;
+}
+.page-header .header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.page-header .header-nav ul a {
+    display: flex;
+    align-items: center;
+}
+.page-header .header-navbar .avatar {
+    widows: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/*=== End Header ===*/
+.page-layout {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+.sidebar {
+    min-width: 240px;
+    width: 240px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: var(--main-color);
+    box-shadow: 0 18px 10px #ddd;
+    transition: all 0.7s;
+    z-index: 999;
+}
+.hidden {
+    margin-right: -240px;
+}
+.collapse {
+    transition: display 5s linear;
+}
+.sidebar .sidebar-nav ul {
+    list-style: none;
+    padding: 0px;
+}
+.sidebar .sidebar-nav ul a {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px;
+    color: var(--head-color);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+/* .sidebar .sidebar-nav ul a::after {
+    content: "\f0d9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    padding-left: 0.5rem;
+} */
+.sidebar .sidebar-nav ul a span {
+    margin-right: 8px;
+}
+.sidebar .sidebar-nav ul a:hover {
+    background-color: #eee;
+}
+.sidebar .sidebar-nav ul a.active {
+    background-color: #eee;
+}
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-right: initial;
+        position: absolute;
+        right: -240px;
+        top: 0;
+        height: 100%;
+    }
+    .hidden {
+        right: 0;
+    }
+}
+/*=== Start Main ===*/
+.page-content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+/* .page-title {
+    
+} */
+.page-title-subheading ol {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+.page-title-subheading li {
+    padding-left: 0.5rem;
+}
+.page-title-subheading li:not(:first-child)::before {
+    content: "\f0d9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    padding-left: 0.5rem;
+}
+/* Start Customers */
+
+/* .responsive-table {
+    overflow-x: auto;
+} */
+table {
+    min-width: 1000px;
+}
+.page-overlay {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 1000;
+}
+@media (max-width: 575.98px) {
+    .delete-dialog {
+        width: 300px;
+    }
+}
+.category-img {
+    width: 100px;
+    height: 100px;
+}
+/* End Customers */
+/*=== End Main ===*/

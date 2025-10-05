@@ -1,0 +1,38 @@
+/*=== Start Variables ===*/
+:root {
+    --main-color: #fefffe;
+    --secondary-color: #f1f5f9;
+    --head-color: #210124;
+    --text-color: #210124;
+    --red-color: #750d37;
+    --green-color: #b3dec1;
+    --milk-color: #e5fcf5;
+}
+
+* {
+    box-sizing: border-box;
+}
+html {
+    direction: rtl;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bs-light-bg-subtle);
+}
+.wrapper {
+    min-height: 100vh;
+}
+.register-page,
+.login-page
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register-page .inner {
+    max-width: 500px;
+}
+.login-page .inner {
+    max-width: 350px;
+}
